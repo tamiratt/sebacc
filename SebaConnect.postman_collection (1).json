@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "48d263e9-5532-4762-8e45-d0b1d43c5312",
+		"name": "SebaConnect",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"df52559d-5c34-49fd-8121-8a7fff7a9cda\",\n    \"categoryId\": 1,\n    \"title\": \"Project -471d4e4d-f339-4903-970f-e79dddd7b2a0\",\n    \"ownerId\": \"ee47e97e-4f52-11eb-b928-0aef4ec1c09b\",\n    \"description\": \"Description\",\n    \"fundingReason\": \"funding_reason\",\n    \"experience\": \"experience\",\n    \"totalInvestment\": 200000.0,\n    \"campaign\": \"campaign\",\n    \"payments\": [\n        {\n            \"status\": \"Completed\",\n            \"country\": \"ET\",\n            \"milestone\": \"0\",\n            \"date\": \"2020-01-01T00:00:00\",\n            \"projectManager\": \"PM\",\n            \"totalPayment\": 1000.0\n        },\n        {\n            \"status\": \"Completed\",\n            \"country\": \"ET\",\n            \"milestone\": \"1\",\n            \"date\": \"2021-01-01T00:00:00\",\n            \"projectManager\": \"PM\",\n            \"totalPayment\": 2000.0\n        }\n    ],\n    \"financials\": [\n        {\n            \"totalIncome\": 900.0,\n            \"totalExpense\": 400.0,\n            \"net\": 5.0,\n            \"statements\": [\n                {\n                    \"type\": \"Expense\",\n                    \"title\": \"Purchase of furniture\",\n                    \"amount\": 3000.0\n                }\n            ]\n        }\n    ],\n    \"statusUpdates\": [\n        {\n            \"status\": \"Created\",\n            \"milestone\": \"0\",\n            \"date\": \"2001-01-01T00:00:00\",\n            \"note\": \"NA\"\n        }\n    ],\n    \"messages\": [\n        {}\n    ],\n    \"backers\": [\n        {\n            \"userId\": \"00000000-0000-0000-0000-000000000000\",\n            \"isAnonymous\": false,\n            \"pledge\": 1000.0,\n            \"note\": null\n        }\n    ],\n    \"donations\": [\n        {\n            \"userId\": \"00000000-0000-0000-0000-000000000000\",\n            \"isAnonymous\": false,\n            \"amount\": 200.0,\n            \"dateTime\": \"2021-01-01T00:00:00\",\n            \"note\": null\n        },\n        {\n            \"userId\": \"00000000-0000-0000-0000-000000000000\",\n            \"isAnonymous\": false,\n            \"amount\": 100.0,\n            \"dateTime\": \"2020-01-01T00:00:00\",\n            \"note\": null\n        }\n    ],\n    \"version\": \"471d4e4d-f339-4903-970f-e79dddd7b2a0\",\n    \"previousVersion\": \"00000000-0000-0000-0000-000000000000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API-URL}}/api/projects/df52559d-5c34-49fd-8121-8a7fff7a9cda",
+							"host": [
+								"{{API-URL}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"df52559d-5c34-49fd-8121-8a7fff7a9cda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{API-URL}}/api/projects/",
+							"host": [
+								"{{API-URL}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": \"471d4e4d-f339-4903-970f-e79dddd7b2a0\",\n        \"categoryId\": 1,\n        \"title\": \"Project -471d4e4d-f339-4903-970f-e79dddd7b2a0\",\n        \"ownerId\": \"ee47e97e-4f52-11eb-b928-0aef4ec1c09b\",\n        \"description\": \"Description\",\n        \"fundingReason\": \"funding_reason\",\n        \"experience\": \"experience\",\n        \"totalInvestment\": 200000.0,\n        \"campaign\": \"campaign\",\n        \"payments\": [\n            {\n                \"status\": \"Completed\",\n                \"country\": \"ET\",\n                \"milestone\": \"0\",\n                \"date\": \"2020-01-01T00:00:00\",\n                \"projectManager\": \"PM\",\n                \"totalPayment\": 1000.0\n            },\n            {\n                \"status\": \"Completed\",\n                \"country\": \"ET\",\n                \"milestone\": \"1\",\n                \"date\": \"2021-01-01T00:00:00\",\n                \"projectManager\": \"PM\",\n                \"totalPayment\": 2000.0\n            }\n        ],\n        \"financials\": [\n            {\n                \"totalIncome\": 900.0,\n                \"totalExpense\": 400.0,\n                \"net\": 5.0,\n                \"statements\": [\n                    {\n                        \"type\": \"Expense\",\n                        \"title\": \"Purchase of furniture\",\n                        \"amount\": 3000.0\n                    }\n                ]\n            }\n        ],\n        \"statusUpdates\": [\n            {\n                \"status\": \"Created\",\n                \"milestone\": \"0\",\n                \"date\": \"2001-01-01T00:00:00\",\n                \"note\": \"NA\"\n            }\n        ],\n        \"messages\": [\n            {}\n        ],\n        \"backers\": [\n            {\n                \"userId\": \"00000000-0000-0000-0000-000000000000\",\n                \"isAnonymous\": false,\n                \"pledge\": 1000.0,\n                \"note\": null\n            }\n        ],\n        \"donations\": [\n            {\n                \"userId\": \"00000000-0000-0000-0000-000000000000\",\n                \"isAnonymous\": false,\n                \"amount\": 200.0,\n                \"dateTime\": \"2021-01-01T00:00:00\",\n                \"note\": null\n            },\n            {\n                \"userId\": \"00000000-0000-0000-0000-000000000000\",\n                \"isAnonymous\": false,\n                \"amount\": 100.0,\n                \"dateTime\": \"2020-01-01T00:00:00\",\n                \"note\": null\n            }\n        ]\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API-URL}}/api/projects",
+							"host": [
+								"{{API-URL}}"
+							],
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"u4\",\n    \"password\": \"p4-updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API-URL}}/api/auth",
+							"host": [
+								"{{API-URL}}"
+							],
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"username\": \"u5\",\n        \"email\": \"u5@gmail.com\",\n        \"password\": \"p5\",\n        \"firstName\": \"First5\",\n        \"fatherName\": \"Father5\",\n        \"grandFatherName\": \"Grand5\",\n        \"birthDate\": \"1987-01-01\",\n        \"phoneNo\": \"55\",\n        \"bio\": \"This is a 5\",\n        \"maritalStatus\": \"Single\",\n        \"children\": 0,\n        \"occupation\": \"occupation5\",\n        \"householdIncome\": 300000,\n        \"address\": null,\n        \"role\": \"Admin\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API-URL}}/api/users",
+							"host": [
+								"{{API-URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{        \"username\": \"u4\",\n        \"email\": \"yonathanbelete@gmail.com\",\n        \"password\": \"p4\",\n        \"firstName\": \"First4\",\n        \"fatherName\": \"Father4\",\n        \"grandFatherName\": \"Grand4\",\n        \"birthDate\": \"1987-01-01\",\n        \"phoneNo\": \"90909090\",\n        \"bio\": \"This is a 4\",\n        \"maritalStatus\": \"Single\",\n        \"children\": 0,\n        \"occupation\": \"occupation4\",\n        \"householdIncome\": 300000,\n        \"address\": null,\n        \"role\": \"Admin\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API-URL}}/api/users/7db56dc6-3c92-49c0-a9c9-3adc7cc9c307",
+							"host": [
+								"{{API-URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"7db56dc6-3c92-49c0-a9c9-3adc7cc9c307"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API-URL}}/api/users/",
+							"host": [
+								"{{API-URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{API-URL}}/api/users/7db56dc6-3c92-49c0-a9c9-3adc7cc9c307/reset",
+							"host": [
+								"{{API-URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"7db56dc6-3c92-49c0-a9c9-3adc7cc9c307",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"p4-updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API-URL}}/api/users/7db56dc6-3c92-49c0-a9c9-3adc7cc9c307",
+							"host": [
+								"{{API-URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"7db56dc6-3c92-49c0-a9c9-3adc7cc9c307"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
